@@ -23,7 +23,7 @@ if (empty($login) or empty($password))
 {
     echo ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
     ?>
-    <a href = "index.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
+    <a href = "/SDC/index.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
     <?php
     exit();
 }
@@ -47,7 +47,7 @@ if (empty($myrow['user_login']))
     //если пользователя с введенным логином не существует
     echo ("Извините, введённый вами login или пароль неверный.");
     ?>
-    <a href = "index.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
+    <a href = "/SDC/index.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
     <?php
     exit();
 }
@@ -61,7 +61,7 @@ else
         $_SESSION['id']         = $myrow['id'];
         $_SESSION['permission'] = $myrow['permission'];
         //эти данные очень часто используются, вот их и будет "носить с собой" вошедший пользователь
-        header('Location: .');
+        header('Location: ..');
         /*echo "Вы успешно вошли на сайт! <a href='index.php'>Главная страница</a>";*/
     }
     else
@@ -69,7 +69,7 @@ else
         //если пароли не сошлись
         echo ("Извините, введённый вами login или пароль неверный.");
         ?>
-        <a href = "index.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
+        <a href = "/SDC/index.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
         <?php
         exit();
     }

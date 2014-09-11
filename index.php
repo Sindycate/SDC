@@ -30,7 +30,7 @@ $result = $link->query($query);
 			if (empty($_SESSION['login']) or empty($_SESSION['id']))
 			{
 				?>
-				<form action="sign_in.php" method="post">
+				<form action="/SDC/php/sign_in.php" method="post">
 					<div class="authorization">
 						<input name="login" type="text" placeholder="login" />
 						<input name="password" type="password" placeholder="password" />
@@ -49,7 +49,7 @@ $result = $link->query($query);
 					<?php
 					echo "Вы вошли на сайт, как ".$_SESSION['login'].".";
 					?>
-					<a href="./endsession.php">Exit</a>
+					<a href="/SDC/php/endsession.php">Exit</a>
 					</div>
 				</div>
 				<?php
@@ -92,7 +92,7 @@ $result = $link->query($query);
 					<div class="date"><?php echo $row["new_article_date"]; ?></div>
 					<div class="category"><?php echo $row["new_article_category"]; ?></div>
 				</div>
-				<p class="content"><?php echo $row["new_article_text"]; ?></p>
+				<p class="content"><?php echo $row["new_article_preview_text"]; ?></p>
 			</div>
 			<a href="./news.php?id=<?php echo $row["id"]; ?>" class="read-full expand">Читать полностью</a>
 			<?php } ?>

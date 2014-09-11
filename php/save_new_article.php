@@ -42,12 +42,22 @@ if (isset($_POST['newArticle_text']))
     }
 }
 
+if (isset($_POST['newArticle_previewText']))
+{
+    $previewtext=$_POST['newArticle_previewText'];
+
+    if ($previewtext =='')
+    {
+        unset($previewtext);
+    }
+}
+
 //если пользователь не ввел логин или пароль, то выдаем ошибку и останавливаем скрипт
-if (empty($title) || empty($date) || empty($category) || empty($text))
+if (empty($title) || empty($date) || empty($category) || empty($text) || empty($previewtext))
 {
 	echo ("Вы ввели не всю информацию, вернитесь назад и заполните все поля.");
 	?>
-	<a href = "new_article.html"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
+	<a href = "/SDC/new_article.html"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
 	<?php
 	exit();
 }
@@ -61,24 +71,24 @@ if (!empty($myrow['id']))
 {
     echo ("Извините, введённый вами заголовок уже существует, введите другой.");
     ?>
-    <a href = "save_new_article.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
+    <a href = "/SDC/save_new_article.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
     <?php
     exit();
 }
 // если такого нет, то сохраняем данные
 
-$result2 = mysql_query("INSERT INTO new_article (new_article_title, new_article_date, new_article_category, new_article_text) VALUES('$title','$date', '$category', '$text')");
+$result2 = mysql_query("INSERT INTO new_article (new_article_title, new_article_date, new_article_category, new_article_text, new_article_preview_text) VALUES('$title','$date', '$category', '$text', '$previewtext')");
 // Проверяем, есть ли ошибки
 if ($result2 == 'TRUE')
 {
-    header('Location: .');
+    header('Location: ..');
     /*echo " Статья успешно сохранена. <a href='index.php'>Главная страница</a>";*/
 }
 else
 {
     echo "Ошибка! Статья не была сохранена.";
     ?>
-    <a href = "index.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
+    <a href = "/SDC/index.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
     <?php
 }
 

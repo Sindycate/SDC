@@ -35,7 +35,7 @@
 				<h1 class="title-line expand">
 					Редактор новостей
 				</h1>
-				<form action="save_new_article.php" method="post">
+				<form action="/SDC/php/save_new_article.php" method="post">
 					<div class="new_title_line">
 						<textarea rows="1" cols="53" name="newArticle_title" placeholder="Заголовок статьи"></textarea>
 					</div>
@@ -47,6 +47,9 @@
 							<textarea rows="1" cols="15" name="newArticle_category" placeholder="Категория"></textarea>
 						</div>
 					</div>
+					<p class="content">
+						<textarea rows="4" cols="61" maxlength="540" name="newArticle_previewText" placeholder="Превью статьи"></textarea>
+					</p>
 					<p class="content">
 						<textarea rows="7" cols="61" name="newArticle_text" placeholder="Текс статьи"></textarea>
 					</p>
