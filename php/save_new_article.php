@@ -71,7 +71,7 @@ if (!empty($myrow['id']))
 {
     echo ("Извините, введённый вами заголовок уже существует, введите другой.");
     ?>
-    <a href = "/SDC/save_new_article.php"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
+    <a href = "/SDC/new_article.html"><button type="submit" class="btn btn-mini btn-s">Home</button></a>
     <?php
     exit();
 }

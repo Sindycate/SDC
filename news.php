@@ -31,10 +31,39 @@ $result = $link->query($query);
 </head>
 <body>
 	<div class="wrapper command-module">
-		<header class="header">
-			<!-- <div class="search">Поиск по сайту...</div> -->
-			<div class="title-string">indycate</div>
-		</header>
+		<div class="navbar">
+			<div class="nav_panel">
+				<a  class="logo" href="/SDC/index.php">
+					<div class="title-string">indycate</div>
+				</a>
+				<!-- <a href="#" >
+					<div class="profile">
+
+					</div>
+				</a> -->
+				<a href="#" >
+					<div class="posts">
+
+					</div>
+				</a>
+				<a href="index.php" >
+					<div class="home">
+
+					</div>
+				</a>
+				<?php
+					if ((!empty($_SESSION['id'])) && ($_SESSION['permission'] == "admin")) {
+				?>
+					<a href="new_article.html" >
+						<div class="add_post">
+									<!-- <a href = ><input class="addArticle" type="submit" value="Добавить новость"></a> -->
+						</div>
+					</a>
+				<?php
+					}
+				?>
+			</div>
+		</div>
 		<?php
 			while($row = mysqli_fetch_array($result)) {
 		?>
