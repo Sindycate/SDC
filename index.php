@@ -122,14 +122,12 @@ $result = $link->query($query);
 						while($row = mysqli_fetch_array($result)) {
 					?>
 					<div class="post">
+						<div class="date"><?php echo $row["new_article_date"]; ?></div>
 						<h1 class="title-line expand"><a href="./news.php?id=<?php echo $row["id"]; ?>"><?php echo $row["new_article_title"]; ?></a></h1>
-						<div class="information">
-							<div class="date"><?php echo $row["new_article_date"]; ?></div>
-							<div class="category"><?php echo $row["new_article_category"]; ?></div>
-						</div>
+						<div class="category"><?php echo $row["new_article_category"]; ?></div>
 						<p class="content"><?php echo $row["new_article_preview_text"]; ?></p>
 					</div>
-					<a href="./news.php?id=<?php echo $row["id"]; ?>" class="read-full expand">Читать полностью</a>
+					<a href="./news.php?id=<?php echo $row["id"]; ?>" class="read-full expand"><input type="button" value="Читать полностью"></a>
 					<?php } ?>
 				</div>
 			</div>

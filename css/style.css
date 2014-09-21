@@ -285,9 +285,8 @@ a {
 .title-line {
 	margin: 0;
 	font-size: 1.5em;
-	text-align: center;
+	text-align: left;
 	color: #333;
-	font-weight: normal;
 }
 
 .title-line:hover {
@@ -295,21 +294,14 @@ a {
 	color: orange;
 }
 
-.information {
-	height: 30px;
-	text-align: center;
-	color: #e8ebff;
-	line-height: 2em;
-	border-top: 1px solid #444;
-	background-color: #555;
-}
 
 .date {
-	display: inline-block;
+	font-size: 11px;
 }
 
 .category {
-	display: inline-block;
+	font-size: 15px;
+	color: green;
 }
 
 .read-full {
