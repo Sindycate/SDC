@@ -115,7 +115,7 @@ $result = $link->query($query);
 			</div>
 			<div class="content_left">
 				<div class="menu">
-					Последнее обновление: 20 сентября
+					Последнее обновление: 5 дней назад
 				</div>
 				<div class="posts_list">
 					<?php
@@ -127,7 +127,8 @@ $result = $link->query($query);
 						<div class="category"><?php echo $row["new_article_category"]; ?></div>
 						<p class="content"><?php echo $row["new_article_preview_text"]; ?></p>
 					</div>
-					<a href="./news.php?id=<?php echo $row["id"]; ?>" class="read-full expand"><input type="button" value="Читать полностью"></a>
+					<a href="./news.php?id=<?php echo $row["id"]; ?>" class="read-full expand">Читать полностью</a>
+					<hr class="dividing_line">
 					<?php } ?>
 				</div>
 			</div>
@@ -142,6 +143,16 @@ $result = $link->query($query);
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="page_nav">
+				<ul class="next_prev">
+					<li>Назад</li>
+					<li>Вперёд</li>
+				</ul>
+				<ul id="nav_pages">
+					<li>1</li>
+					<li>2</li>
+				</ul>
 			</div>
 			<div class="clear"></div>
 			<div class="footer_panel">

@@ -30,22 +30,20 @@
 				</a>
 			</div>
 		</div>
-		<div class="news-block">
-			<div class="new_post">
-				<h1 class="title-line expand">
-					Редактор новостей
-				</h1>
+		<div class="inner">
+			<div class="page_head">
+				Редактор новостей
+			</div>
+			<div class="content_left">
 				<form action="/SDC/php/save_new_article.php" method="post">
+					<div class="date">
+						<textarea rows="1" cols="15" name="newArticle_date" placeholder="Дата"></textarea>
+					</div>
 					<div class="new_title_line">
 						<textarea rows="1" cols="53" name="newArticle_title" placeholder="Заголовок статьи"></textarea>
 					</div>
-					<div class="new_information">
-						<div class="date">
-							<textarea rows="1" cols="15" name="newArticle_date" placeholder="Дата"></textarea>
-						</div>
-						<div class="category">
-							<textarea rows="1" cols="15" name="newArticle_category" placeholder="Категория"></textarea>
-						</div>
+					<div class="category">
+						<textarea rows="1" cols="15" name="newArticle_category" placeholder="Категория"></textarea>
 					</div>
 					<p class="content">
 						<textarea rows="4" cols="61" maxlength="540" name="newArticle_previewText" placeholder="Превью статьи"></textarea>

@@ -36,11 +36,6 @@ $result = $link->query($query);
 				<a  class="logo" href="/SDC/index.php">
 					<div class="title-string">indycate</div>
 				</a>
-				<!-- <a href="#" >
-					<div class="profile">
-
-					</div>
-				</a> -->
 				<a href="#" >
 					<div class="posts">
 
@@ -51,33 +46,22 @@ $result = $link->query($query);
 
 					</div>
 				</a>
-				<?php
-					if ((!empty($_SESSION['id'])) && ($_SESSION['permission'] == "admin")) {
-				?>
-					<a href="new_article.html" >
-						<div class="add_post">
-									<!-- <a href = ><input class="addArticle" type="submit" value="Добавить новость"></a> -->
-						</div>
-					</a>
-				<?php
-					}
-				?>
 			</div>
 		</div>
-		<?php
-			while($row = mysqli_fetch_array($result)) {
-		?>
-		<div class="news_post">
-			<h1 class="title-line expand"><?php echo $row["new_article_title"]; ?></h1>
-			<div class="news_information">
-				<div class="date"><?php echo $row["new_article_date"]; ?></div>
-				<div class="category"><?php echo $row["new_article_category"]; ?></div>
+		<div class="inner">
+			<?php
+				while($row = mysqli_fetch_array($result)) {
+			?>
+			<div class="date"><?php echo $row["new_article_date"]; ?></div>
+			<div class="page_head">
+				<?php echo $row["new_article_title"]; ?>
 			</div>
-			<p class="content"><?php echo $row["new_article_text"]; ?></p>
+				<div class="new_post">
+					<div class="category"><?php echo $row["new_article_category"]; ?></div>
+					<p class="content"><?php echo $row["new_article_text"]; ?></p>
+				</div>
+			<?php } ?>
 		</div>
-		<?php } ?>
-		<!-- <div class="footer">Подвал сайта</div> -->
-	</div>
 	<!-- <script src="./js/main.js"></script> -->
 </body>
 </html>
