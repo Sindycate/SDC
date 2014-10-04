@@ -6,10 +6,23 @@ $link = mysqli_connect("localhost","root","","personal_page") or die("Error " . 
 
 //consultation:
 $table_name = "new_article";
-$query = "SELECT * FROM $table_name ORDER BY `new_article_date`";
 
+if (isset($_GET['page_num'])) {
+	$current_page = $_GET['page_num'];
+}
+else {
+	$current_page = 1;
+}
+$articles_num = 1;
+// $start_pos = ($_GET['page_num'] * 5) ? $_GET['page_num'] * 5 : 0;
+$start_pos = ($current_page - 1) * $articles_num;
+
+$query = "SELECT * FROM $table_name ORDER BY `new_article_date` LIMIT $start_pos , $articles_num";
+$query2 = "SELECT * FROM $table_name";
 //execute the query.
 
+$result2 = $link->query($query2);
+$result2 = (mysqli_num_rows($result2));
 $result = $link->query($query);
 
 ?>
@@ -115,7 +128,7 @@ $result = $link->query($query);
 			</div>
 			<div class="content_left">
 				<div class="menu">
-					Последнее обновление: 5 дней назад
+
 				</div>
 				<div class="posts_list">
 					<?php
@@ -146,25 +159,37 @@ $result = $link->query($query);
 			</div>
 			<div class="page_nav">
 				<ul class="next_prev">
+				<?php if ($current_page > 1) {?>
+					<li><a href="index.php?page_num=<?php echo ($current_page - 1); ?> ">Назад</a></li>
+				<?php } else { ?>
 					<li>Назад</li>
+				<?php } ?>
+				<?php if ((($result2 / $articles_num) + (($result2 % $articles_num) ? 1 : 0)) >= ($current_page + 1)) {?>
+					<li><a href="index.php?page_num=<?php echo ($current_page + 1); ?> ">Вперёд</a></li>
+				<?php } else { ?>
 					<li>Вперёд</li>
+				<?php } ?>
 				</ul>
 				<ul id="nav_pages">
-					<li>1</li>
-					<li>2</li>
+				<?php if ($current_page > 1) {?>
+					<li><a href="./index.php?page_num=<?php echo ($current_page - 1); ?>"><?php echo ($current_page - 1); ?></a></li>
+				<?php } ?>
+					<li><a href="./index.php?page_num=<?php echo ($current_page); ?>"><?php echo $current_page; ?></a></li>
+				<?php if ((($result2 / $articles_num) + (($result2 % $articles_num) ? 1 : 0)) >= ($current_page + 1)) {?>
+					<li><a href="./index.php?page_num=<?php echo ($current_page + 1); ?>"><?php echo ($current_page + 1); ?></a></li>
+				<?php } ?>
 				</ul>
 			</div>
 			<div class="clear"></div>
-			<div class="footer_panel">
-				<div class="footer">
-					2014 Sindycate
-				</div>
-				<div class="footer_logos">
-
-				</div>
-			</div>
 		</div>
-		<!-- <div class="footer">Подвал сайта</div> -->
+		<div class="page_buffer"></div>
+	</div>
+	<div class="footer_panel">
+		<div class="footer">
+			2014 Sindycate
+		</div>
+		<div class="footer_logos">
+		</div>
 	</div>
 	<script src="./js/main.js"></script>
 </body>

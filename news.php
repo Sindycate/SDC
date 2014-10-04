@@ -62,6 +62,15 @@ $result = $link->query($query);
 				</div>
 			<?php } ?>
 		</div>
+		<div class="page_buffer"></div>
+	</div>
+	<div class="footer_panel">
+		<div class="footer">
+			2014 Sindycate
+		</div>
+		<div class="footer_logos">
+		</div>
+	</div>
 	<!-- <script src="./js/main.js"></script> -->
 </body>
 </html>
