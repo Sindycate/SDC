@@ -56,21 +56,19 @@ $result = $link->query($query);
 			<div class="page_head">
 				<?php echo $row["new_article_title"]; ?>
 			</div>
-				<div class="new_post">
-					<div class="category"><?php echo $row["new_article_category"]; ?></div>
-					<p class="content"><?php echo $row["new_article_text"]; ?></p>
-				</div>
+			<div class="category"><?php echo $row["new_article_category"]; ?></div>
+			<div class="content"><?php echo $row["new_article_text"]; ?></div>
 			<?php } ?>
 		</div>
 		<div class="page_buffer"></div>
 	</div>
-	<div class="footer_panel">
+	<!-- <div class="footer_panel">
 		<div class="footer">
 			2014 Sindycate
 		</div>
 		<div class="footer_logos">
 		</div>
-	</div>
+	</div> -->
 	<!-- <script src="./js/main.js"></script> -->
 </body>
 </html>

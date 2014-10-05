@@ -13,7 +13,7 @@ if (isset($_GET['page_num'])) {
 else {
 	$current_page = 1;
 }
-$articles_num = 1;
+$articles_num = 3;
 // $start_pos = ($_GET['page_num'] * 5) ? $_GET['page_num'] * 5 : 0;
 $start_pos = ($current_page - 1) * $articles_num;
 
@@ -55,8 +55,8 @@ $result = $link->query($query);
 					</a>
 					<div id="open_id" class="sign_in hidden">
 					<form action="/SDC/php/sign_in.php" method="post">
-						<input name="login" type="text" placeholder="login" />
-						<input name="password" type="password" placeholder="password" />
+						<input name="login" type="text" size="17" placeholder="login" />
+						<input name="password" type="password" size="17" placeholder="password" />
 						<input class="Sign_in" type="submit" value="Войти">
 						<a href = "registration.html">Зарегестрироваться</a>
 					</form>
@@ -184,13 +184,13 @@ $result = $link->query($query);
 		</div>
 		<div class="page_buffer"></div>
 	</div>
-	<div class="footer_panel">
+	<!-- <div class="footer_panel">
 		<div class="footer">
 			2014 Sindycate
 		</div>
 		<div class="footer_logos">
 		</div>
-	</div>
+	</div> -->
 	<script src="./js/main.js"></script>
 </body>
 </html>

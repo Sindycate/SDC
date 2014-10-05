@@ -64,7 +64,7 @@ ul {
 
 .nav_panel {
 	background-color: #333;
-	width: 180px;
+	width: 160px;
 	min-height: 100%;
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
@@ -75,7 +75,7 @@ ul {
 
 .logo {
 	display: block;
-	width: 180px;
+	width: 160px;
 	height: 100px;
 	margin: 0 0 2px 0;
 	background-color: orange;
@@ -96,116 +96,116 @@ ul {
 }
 
 .posts {
-	width: 180px;
+	width: 160px;
 	height: 70px;
 	margin: 0px 0 2px 0;
 	background-color: #888;
 	background-image: url(../img/grid.png);
 	background-repeat: no-repeat;
-	background-position: 70px 20px;
+	background-position: 60px 20px;
 	background-size: 30px 30px;
 }
 
 .posts:hover {
-	width: 180px;
+	width: 160px;
 	height: 70px;
 	margin: 2px 0 2px 0;
 	background-color: #999;
 	background-image: url(../img/grid.png);
 	background-repeat: no-repeat;
-	background-position: 70px 20px;
+	background-position: 60px 20px;
 	background-size: 30px 30px;
 }
 
 .profile {
-	width: 180px;
+	width: 160px;
 	height: 70px;
 	margin: 0 0 2px 0;
 	background-color: #888;
 	background-image: url(../img/user.png);
 	background-repeat: no-repeat;
-	background-position: 70px 20px;
+	background-position: 60px 20px;
 	background-size: 30px 30px;
 }
 
 .enter {
-	width: 180px;
+	width: 160px;
 	height: 70px;
 	margin: 2px 0 2px 0;
 	background-color: #888;
 	background-image: url(../img/smashing.png);
 	background-repeat: no-repeat;
-	background-position: 70px 20px;
+	background-position: 60px 20px;
 	background-size: 30px 30px;
 }
 
 .profile:hover {
-	width: 180px;
+	width: 160px;
 	height: 70px;
 	margin: 2px 0 2px 0;
 	background-color: #999;
 	background-image: url(../img/user.png);
 	background-repeat: no-repeat;
-	background-position: 70px 20px;
+	background-position: 60px 20px;
 	background-size: 30px 30px;
 }
 
 .open_profile {
-	width: 180px;
+	width: 160px;
 	height: 100px;
 	margin: 2px 0 2px 0;
 	background-color: #888;
 }
 
 .sign_in {
-	width: 180px;
+	width: 160px;
 	height: 100px;
 	margin: 2px 0 2px 0;
 	background-color: #888;
 }
 
 .add_post {
-	width: 180px;
+	width: 160px;
 	height: 70px;
 	margin: 0px 0 2px 0;
 	background-color: #888;
 	background-image: url(../img/plus.png);
 	background-repeat: no-repeat;
-	background-position: 70px 20px;
+	background-position: 60px 20px;
 	background-size: 30px 30px;
 }
 
 .add_post:hover {
-	width: 185px;
+	width: 165px;
 	height: 70px;
 	margin: 3px 0 2px 0;
 	background-color: #999;
 	background-image: url(../img/plus.png);
 	background-repeat: no-repeat;
-	background-position: 70px 20px;
+	background-position: 60px 20px;
 	background-size: 30px 30px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .home {
-	width: 180px;
+	width: 160px;
 	height: 70px;
 	margin: 0px 0 2px 0;
 	background-color: #888;
 	background-image: url(../img/arrow2.png);
 	background-repeat: no-repeat;
-	background-position: 70px 20px;
+	background-position: 60px 20px;
 	background-size: 30px 30px;
 }
 
 .home:hover {
-	width: 180px;
+	width: 160px;
 	height: 70px;
 	margin: 2px 0 2px 0;
 	background-color: #999;
 	background-image: url(../img/arrow2.png);
 	background-repeat: no-repeat;
-	background-position: 70px 20px;
+	background-position: 60px 20px;
 	background-size: 30px 30px;
 }
 
@@ -243,7 +243,7 @@ ul {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	margin: 0 24px -100px 210px;
+	margin: 0 24px -100px 190px;
 	padding-top: 12px;
 }
 
@@ -280,12 +280,12 @@ ul {
 .dividing_line {
 	width: 30%;
 	margin-right: 70%;
-	opacity: .2;
+	opacity: .3;
 }
 
 .post {
 	/* display: block; */
-	margin: 40px 0 0 0;
+	margin: 40px 0 15px 0;
 	min-height: 250px;
 	overflow: hidden;
 }
@@ -352,6 +352,7 @@ ul {
 .content {
 	font-size: 1em;
 	margin: 15px;
+	width: 930px;
 	/*height: 120px;*/
 	/* overflow: hidden; */
 }
@@ -445,13 +446,18 @@ ul {
 /*
  * New Article
  ***************************************************************************************************/
+
+.new_article_items li {
+	margin: 0 0 15px 0;
+}
+
 .addArticle {
 	display: block;
 	margin: 35px 0 0 30px;
 }
 
 .saveArticle {
-	margin: 5px 0 0 470px;
+	margin: 5px 0 15px 775px;
 }
 
 .publish {
@@ -459,16 +465,16 @@ ul {
 	margin: 35px 0 0 25px;
 }
 
-.posts {
+/* .posts {
 	width: 180px;
 	height: 70px;
 	margin: 0px 0 2px 0;
 	background-color: #888;
 	background-image: url(../img/grid.png);
 	background-repeat: no-repeat;
-	background-position: 70px 20px;
+	background-position: 60px 20px;
 	background-size: 30px 30px;
-}
+} */
 
 .new_title_line {
 	margin: 30px 0 20px 50px;
@@ -509,22 +515,5 @@ ul {
  * News page
  ***************************************/
 
-.news_post {
-	margin: 50px auto 0 auto;
-	padding: 0 0 10px 0;
-	width: 900px;
-	height: auto;
-	background-color: #fff;
-	box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
 
-.news_information {
-	display: inline-block;
-	width: 900px;
-	height: 30px;
-	text-align: center;
-	color: #e8ebff;
-	line-height: 2em;
-	border-top: 1px solid #444;
-	background-color: #555;
-}
+

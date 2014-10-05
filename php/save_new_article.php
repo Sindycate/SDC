@@ -32,9 +32,9 @@ if (isset($_POST['newArticle_category']))
     }
 }
 
-if (isset($_POST['newArticle_text']))
+if (isset($_POST['newArticle_content']))
 {
-    $text=$_POST['newArticle_text'];
+    $text=$_POST['newArticle_content'];
 
     if ($text =='')
     {
